@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".controller.AppealUpdataFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.thematicworks.viewmodel.AppealcontentViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/goupdata"
+                android:layout_width="128dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="#EC8787"
+                android:text="修改"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="128dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="#EC8787"
+                android:text="返回"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/form"
+                android:layout_width="207dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/updatacontext"
+                android:textAlignment="center"
+                android:textColor="#040303"
+                android:textColorHint="#040303"
+                android:textColorLink="#190606"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/formchoose"
+                android:layout_width="138dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/txt_appeal_tttproject"
+                android:textAlignment="center"
+                android:textColorHint="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvphon" />
+
+
+            <TextView
+                android:id="@+id/contentview"
+                android:layout_width="138dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/txt_appeal_tttcontent"
+                android:textAlignment="center"
+                android:textColorHint="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/scroll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formchoose" />
+
+            <Spinner
+                android:id="@+id/formmenu"
+                android:layout_width="212dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:entries="@{viewModel.menu}"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/formchoose"
+                app:layout_constraintTop_toBottomOf="@+id/TKphone" />
+
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="364dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/goupdata"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/formcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:hint="@string/txt_appeal_appealmeun"
+                        android:inputType="textMultiLine"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:text="@={viewModel.appeal.remark}" />
+                </LinearLayout>
+            </ScrollView>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="109dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/carview"
+                app:imagePath="@{viewModel.appeal.imagePath}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/form" />
+
+            <Button
+                android:id="@+id/btpoto"
+                android:layout_width="115dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                android:backgroundTint="#931EDD"
+                android:text="挑選照片"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvticketnum"
+                android:layout_width="159dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="10dp"
+                android:text="申訴之罰單編號:"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/tvcarnum"
+                android:layout_width="145dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="申訴者姓名:"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvticketnum" />
+
+            <TextView
+                android:id="@+id/tvphon"
+                android:layout_width="138dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="行動電話:"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvcarnum" />
+
+            <EditText
+                android:id="@+id/TKnumber"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@={viewModel.appeal.ticketnumber}"
+                app:layout_constraintStart_toEndOf="@+id/tvticketnum"
+                app:layout_constraintTop_toBottomOf="@+id/btpoto" />
+
+            <EditText
+                android:id="@+id/TKname"
+                android:layout_width="232dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@={viewModel.appeal.ticketname}"
+                app:layout_constraintStart_toEndOf="@+id/tvcarnum"
+                app:layout_constraintTop_toBottomOf="@+id/TKnumber" />
+
+            <EditText
+                android:id="@+id/TKphone"
+                android:layout_width="232dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="phone"
+                android:text="@={viewModel.appeal.phone}"
+                app:layout_constraintStart_toEndOf="@+id/tvphon"
+                app:layout_constraintTop_toBottomOf="@+id/TKname" />
+
+            <TextView
+                android:id="@+id/textnote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@={viewModel.text}"
+                android:textAlignment="center"
+                android:textColor="#F40000"
+                app:layout_constraintBottom_toTopOf="@+id/goupdata"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scroll" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

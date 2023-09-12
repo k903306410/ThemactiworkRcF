@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "843670481844",
+    "project_id": "fireticket-18c08",
+    "storage_bucket": "fireticket-18c08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843670481844:android:5d1decddfc05de0beda0e1",
+        "android_client_info": {
+          "package_name": "com.example.thematicworks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHsHbay3mBt8N9dvBw9FaZlkRkNKm4HQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

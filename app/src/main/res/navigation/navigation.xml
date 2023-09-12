@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/appealFragment">
+
+    <fragment
+        android:id="@+id/appealFragment"
+        android:name="com.example.thematicworks.controller.AppealFragment"
+        android:label="fragment_appeal"
+        tools:layout="@layout/fragment_appeal" />
+    <fragment
+        android:id="@+id/appealcontentFragment"
+        android:name="com.example.thematicworks.controller.AppealcontentFragment"
+        android:label="fragment_appealcontent"
+        tools:layout="@layout/fragment_appealcontent" />
+    <fragment
+        android:id="@+id/appealtermsFragment"
+        android:name="com.example.thematicworks.controller.AppealtermsFragment"
+        android:label="fragment_appealterms"
+        tools:layout="@layout/fragment_appealterms" />
+    <fragment
+        android:id="@+id/appealtermstwoFragment"
+        android:name="com.example.thematicworks.controller.AppealtermstwoFragment"
+        android:label="fragment_appealtermstwo"
+        tools:layout="@layout/fragment_appealtermstwo" />
+    <fragment
+        android:id="@+id/appealUpdataFragment"
+        android:name="com.example.thematicworks.controller.AppealUpdataFragment"
+        android:label="fragment_appeal_updata"
+        tools:layout="@layout/fragment_appeal_updata" />
+    <fragment
+        android:id="@+id/appealListFragment"
+        android:name="com.example.thematicworks.controller.AppealListFragment"
+        android:label="AppealListFragment" />
+</navigation>
